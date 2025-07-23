@@ -9,6 +9,11 @@ return {
       -- },
       scroll = { enabled = false },
       picker = {
+        formatters = {
+          file = {
+            truncate = 90,
+          },
+        },
         explorer = {
           tree = false,
         },
