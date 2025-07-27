@@ -53,6 +53,7 @@ require("lazy").setup({
 })
 -- Gruvbox theme
 vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox-material]])
 vim.cmd([[colorscheme catppuccin]])
 
 -- vim.cmd([[colorscheme onedark]])
