@@ -7,6 +7,7 @@ vim.keymap.set("n", "gl", "$", { silent = true })
 vim.keymap.set("n", "gh", "_", { silent = true })
 vim.keymap.set("n", "<leader>y", "Flash", { silent = true, desc = "Jump to Flash" })
 vim.keymap.set("v", "io", "<ESC>", { silent = true, desc = "Exit visual mode" })
+vim.keymap.set("n", "x", '"_x', { silent = true })
 
 -- vim.keymap.set("n", "<leader>h", "<cmd>Hardtime toggle<CR>")
 vim.keymap.set("n", "<leader>h", function()
