@@ -8,17 +8,20 @@ vim.keymap.set("n", "gh", "_", { silent = true })
 vim.keymap.set("n", "<leader>y", "Flash", { silent = true, desc = "Jump to Flash" })
 vim.keymap.set("v", "io", "<ESC>", { silent = true, desc = "Exit visual mode" })
 vim.keymap.set("n", "x", '"_x', { silent = true })
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", { silent = true })
+vim.keymap.set("n", "<C-s>", "<Cmd>w<CR>", { silent = true })
+vim.keymap.set({ 'v', 'x' }, '<leader>up', '"0p', { desc = 'Paste from "0 register in visual mode', silent = true })
 
 -- vim.keymap.set("n", "<leader>h", "<cmd>Hardtime toggle<CR>")
-vim.keymap.set("n", "<leader>h", function()
-  if require("hardtime").is_plugin_enabled then
-    require("hardtime").disable()
-    vim.notify("Hardtime disabled !")
-  else
-    require("hardtime").enable()
-    vim.notify("Hardtime enabled !")
-  end
-end, { desc = "Toggle Hardtime" })
+-- vim.keymap.set("n", "<leader>h", function()
+--   if require("hardtime").is_plugin_enabled then
+--     require("hardtime").disable()
+--     vim.notify("Hardtime disabled !")
+--   else
+--     require("hardtime").enable()
+--     vim.notify("Hardtime enabled !")
+--   end
+-- end, { desc = "Toggle Hardtime" })
 
 vim.keymap.set("n", "<leader>gl", function()
   vim.cmd(":GitBlameToggle")

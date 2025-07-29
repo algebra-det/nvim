@@ -5,7 +5,7 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        theme = "auto",
+        theme = "gruvbox-material",
       },
       sections = {
         lualine_c = {
