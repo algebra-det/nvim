@@ -10,7 +10,11 @@ vim.keymap.set("v", "io", "<ESC>", { silent = true, desc = "Exit visual mode" })
 vim.keymap.set("n", "x", '"_x', { silent = true })
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", { silent = true })
 vim.keymap.set("n", "<C-s>", "<Cmd>w<CR>", { silent = true })
-vim.keymap.set({ 'v', 'x' }, '<leader>up', '"0p', { desc = 'Paste from "0 register in visual mode', silent = true })
+-- vim.keymap.set({ "n", "v", "x" }, "<C-k>", "<ESC>", { silent = true })
+vim.keymap.set({ "v", "x" }, "<leader>up", '"0p', { desc = 'Paste from "0 register in visual mode', silent = true })
+
+-- vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+vim.keymap.set("t", "<c-\\>", "<c-\\><c-n>")
 
 -- vim.keymap.set("n", "<leader>h", "<cmd>Hardtime toggle<CR>")
 -- vim.keymap.set("n", "<leader>h", function()
@@ -44,8 +48,6 @@ vim.keymap.set(
   insertFullPath,
   { noremap = true, silent = true, desc = "Copy current file relative path" }
 )
-
-vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 local state = {
   floating = {

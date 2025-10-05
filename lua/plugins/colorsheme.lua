@@ -2,7 +2,7 @@ return {
   {
     "sainnhe/gruvbox-material",
     enabled = true,
-    priority = 150,
+    priority = 999,
     lazy = false,
     config = function()
       vim.g.gruvbox_material_transparent_background = 0
@@ -34,7 +34,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    priority = 1000,
+    priority = 998,
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
@@ -466,15 +466,19 @@ return {
       vim.api.nvim_command("colorscheme catppuccin")
     end,
   },
+  -- {
+  --   "navarasu/onedark.nvim",
+  --   priority = 999, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     require("onedark").setup({
+  --       style = "darker",
+  --     })
+  --     -- Enable theme
+  --     require("onedark").load()
+  --   end,
+  -- },
   {
-    "navarasu/onedark.nvim",
-    priority = 999, -- make sure to load this before all the other start plugins
-    config = function()
-      require("onedark").setup({
-        style = "darker",
-      })
-      -- Enable theme
-      require("onedark").load()
-    end,
+    "olimorris/onedarkpro.nvim",
+    priority = 1000,
   },
 }

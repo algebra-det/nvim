@@ -4,9 +4,9 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     opts = {
-      options = {
-        theme = "gruvbox-material",
-      },
+      -- options = {
+      --   theme = "gruvbox-material",
+      -- },
       sections = {
         lualine_c = {
           {
