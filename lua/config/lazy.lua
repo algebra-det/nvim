@@ -30,7 +30,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "catppuccin", "gruvbox" } },
+  -- install = { colorscheme = { "catppuccin", "gruvbox" } },
+  install = { colorscheme = { "gruvbox" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
@@ -53,11 +54,11 @@ require("lazy").setup({
 })
 -- Gruvbox theme
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox-material]])
-vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme gruvbox-material]])
+-- vim.cmd([[colorscheme catppuccin]])
 
--- vim.cmd([[colorscheme onedark]])
+vim.cmd([[colorscheme onedark]])
 
-vim.g.copilot_node_command = "/home/akash/.nvm/versions/node/v20.11.1/bin/node"
+vim.g.copilot_node_command = "/home/akash/.nvm/versions/node/v22.20.0/bin/node"
 
 vim.lsp.inlay_hint.enable(false)
