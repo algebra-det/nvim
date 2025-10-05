@@ -12,6 +12,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
+vim.g.copilot_node_command = "/home/akash/.nvm/versions/node/v22.20.0/bin/node"
+vim.env.PATH = "/home/akash/.nvm/versions/node/v22.20.0/bin:" .. vim.env.PATH
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -58,7 +62,5 @@ vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme catppuccin]])
 
 vim.cmd([[colorscheme onedark]])
-
-vim.g.copilot_node_command = "/home/akash/.nvm/versions/node/v22.20.0/bin/node"
 
 vim.lsp.inlay_hint.enable(false)
